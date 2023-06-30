@@ -1,0 +1,10 @@
+{% extends '_base.html'%}
+{% block title %}Home{% endblock title %}
+{% block context %}
+    {% for post in posts %}
+        <img src="{{ post.image.url }}" >
+       <h2>{{ post.name }}</h2>
+    
+    {% endfor %}
+    
+{% endblock context %}
