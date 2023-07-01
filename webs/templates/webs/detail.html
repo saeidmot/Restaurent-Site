@@ -1,0 +1,27 @@
+{% extends "_base.html" %}
+{% block title %}{{ posts.name }}{% endblock title %}
+{% block context %}
+    <a>{{ posts.name }}</a>
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div class="card mb-3">
+  <img src="{{ posts.image.url }}" class="card-img-top" width="500px" alt="...">
+    </div>
+
+
+<div class="card mb-3" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ posts.image.url }}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:  black;text-align: right"><span>نام غذا :  </span>{{ posts.name}}</h5>
+        <p class="card-text" style="color:  black;text-align: right"><span> توضیحات : </span>{{ posts.text}}</p>
+           <p class="card-text" style="color:  black;text-align: right"><span> قیمت : </span>{{ posts.price}} تومان </p>
+        <p class="card-text"><small class="text-body-secondary">قیمت = {{ posts.price }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock context %}
